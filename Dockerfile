@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8081
 
 # Run the application using Gunicorn, binding to the port provided by Google Cloud
-CMD ["gunicorn", "-b", "0.0.0.0:$PORT", "app:app"]
+CMD gunicorn -b 0.0.0.0:$PORT app:app
