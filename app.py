@@ -11,7 +11,6 @@ GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini
 # In-memory storage for chat history (for demonstration purposes)
 chat_history = []
 
-
 @app.route("/chat", methods=["POST"])
 def chat():
     try:
@@ -66,7 +65,6 @@ def chat():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
