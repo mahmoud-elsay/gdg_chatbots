@@ -14,7 +14,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . .
 
 # Expose the port that Cloud Run dynamically assigns (via the $PORT environment variable)
-EXPOSE 8080
+EXPOSE 8081
 
 # Run the application using Gunicorn, binding to the port provided by Google Cloud
 CMD ["gunicorn", "-b", "0.0.0.0:$PORT", "app:app"]
